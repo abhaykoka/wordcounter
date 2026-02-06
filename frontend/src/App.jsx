@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_URL = 'http://127.0.0.1:8000/count';
+const API_URL = import.meta.env.PROD ? '/api/count' : 'http://127.0.0.1:8000/count';
 
 function App() {
   const [text, setText] = useState('');
